@@ -12,11 +12,15 @@ struct FirstView: View {
     //MARK: - Properties
     
     @StateObject private var signUpWithPhoneVM = SignUpWithPhoneViewModel()
+    
     @State private var phoneNumber: String = ""
     @State private var smsPassword: String = ""
+
     @State private var isNumberSuccess: Bool = false
+    
     @State private var showAlert: Bool = false
     @State private var alertMessage: String = ""
+    
     @State private var showHomeView: Bool = false
     
     //MARK: - View
