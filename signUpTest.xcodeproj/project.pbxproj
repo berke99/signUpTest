@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3607583F2C8F205C007E2C6D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3607583E2C8F205C007E2C6D /* HomeView.swift */; };
 		36F888ED2C8F0B9D00F7E6A4 /* signUpTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F888EC2C8F0B9D00F7E6A4 /* signUpTestApp.swift */; };
 		36F888EF2C8F0B9D00F7E6A4 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F888EE2C8F0B9D00F7E6A4 /* FirstView.swift */; };
 		36F888F12C8F0B9E00F7E6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F888F02C8F0B9E00F7E6A4 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3607583E2C8F205C007E2C6D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36F888E92C8F0B9D00F7E6A4 /* signUpTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signUpTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F888EC2C8F0B9D00F7E6A4 /* signUpTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpTestApp.swift; sourceTree = "<group>"; };
 		36F888EE2C8F0B9D00F7E6A4 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3607583C2C8F200D007E2C6D /* SignUpSms */ = {
+			isa = PBXGroup;
+			children = (
+				36F888EE2C8F0B9D00F7E6A4 /* FirstView.swift */,
+				36F888FA2C8F112400F7E6A4 /* SignUpWithPhoneViewModel.swift */,
+			);
+			path = SignUpSms;
+			sourceTree = "<group>";
+		};
+		3607583D2C8F2033007E2C6D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3607583E2C8F205C007E2C6D /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		36F888E02C8F0B9D00F7E6A4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				36F888EC2C8F0B9D00F7E6A4 /* signUpTestApp.swift */,
-				36F888EE2C8F0B9D00F7E6A4 /* FirstView.swift */,
-				36F888FA2C8F112400F7E6A4 /* SignUpWithPhoneViewModel.swift */,
-				36F888F02C8F0B9E00F7E6A4 /* Assets.xcassets */,
+				3607583C2C8F200D007E2C6D /* SignUpSms */,
+				3607583D2C8F2033007E2C6D /* Home */,
 				36F888F22C8F0B9E00F7E6A4 /* Preview Content */,
 			);
 			path = signUpTest;
@@ -66,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				36F888F32C8F0B9E00F7E6A4 /* Preview Assets.xcassets */,
+				36F888F02C8F0B9E00F7E6A4 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -141,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36F888EF2C8F0B9D00F7E6A4 /* FirstView.swift in Sources */,
+				3607583F2C8F205C007E2C6D /* HomeView.swift in Sources */,
 				36F888ED2C8F0B9D00F7E6A4 /* signUpTestApp.swift in Sources */,
 				36F888FB2C8F112400F7E6A4 /* SignUpWithPhoneViewModel.swift in Sources */,
 			);

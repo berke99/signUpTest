@@ -9,12 +9,17 @@ import SwiftUI
 
 struct FirstView: View {
     
+    //MARK: - Properties
+    
     @StateObject private var signUpWithPhoneVM = SignUpWithPhoneViewModel()
     @State private var phoneNumber: String = ""
     @State private var smsPassword: String = ""
     @State private var isNumberSuccess: Bool = false
     @State private var showAlert: Bool = false
     @State private var alertMessage: String = ""
+    @State private var showHomeView: Bool = false
+    
+    //MARK: - View
     
     var body: some View {
         NavigationView {
@@ -65,8 +70,13 @@ struct FirstView: View {
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Hata"), message: Text(alertMessage), dismissButton: .default(Text("Tamam")))
             }
+            .fullScreenCover(isPresented: $showHomeView) {
+                    HomeView()
+            }
         }
     }
+    
+    //MARK: - Functions
     
     private func signUpWithPhone() {
         guard !phoneNumber.isEmpty else {
@@ -92,7 +102,7 @@ struct FirstView: View {
                 if success{
                     // ARTIK KULLANICI GİRİŞ YAPTI
                     // DİĞER SAYFAYA YÖNLENDİR
-                    print("---->>> Ana Sayfaya Yönlendir")
+                    showHomeView = true
                 }else {
                     alertMessage = "SMS Kodu Yanlış"
                     showAlert = true
@@ -100,7 +110,6 @@ struct FirstView: View {
             }
         }
     }
-    
     
 }
 
