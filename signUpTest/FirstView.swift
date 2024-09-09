@@ -43,17 +43,20 @@ struct FirstView: View {
     }
     
     private func signUpWithPhone(){
-        if let phoneInt = Int(phoneNumber){
-            signUpWithPhoneVM.signUpPhoneNumber(phoneNumber: phoneInt) { success in
-                if success {
-                    print("Doğru")
-                }else{
-                    print("ViewModel Hata Döndürür")
-                }
-            }
-        }else{
-            print("signUpWithPhone func err")
+      
+        guard !phoneNumber.isEmpty else {
+            print("Telefon Boş Geldi.")
+            return
         }
+        
+        signUpWithPhoneVM.signUpPhoneNumber(phoneNumber: phoneNumber) { success in
+            if success {
+                print("Kayıt başarılı.")
+            } else {
+                print("ViewModel Hata Döndürür")
+            }
+        }
+        
     }
 }
 

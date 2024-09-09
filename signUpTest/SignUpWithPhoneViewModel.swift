@@ -9,7 +9,7 @@ import Foundation
 
 class SignUpWithPhoneViewModel: ObservableObject{
     
-    func signUpPhoneNumber(phoneNumber: Int, completion: @escaping (Bool) -> Void){
+    func signUpPhoneNumber(phoneNumber: String, completion: @escaping (Bool) -> Void){
         print("SignUpWithPhoneViewModel içerisinde numara: \(phoneNumber)")
         
         DispatchQueue.main.async {
