@@ -17,5 +17,14 @@ class SignUpWithPhoneViewModel: ObservableObject{
         }
     }
     
+    func smsPasswordForSignUp(smsPassword: Int, completion: @escaping (Bool) -> Void){
+        print("SignUpWithPhoneViewModel içerisinde sms Şifresi: \(smsPassword)")
+        
+        DispatchQueue.main.async {
+            completion(true)
+        }
+
+    }
+    
 }
 
